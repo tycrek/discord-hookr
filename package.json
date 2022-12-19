@@ -1,30 +1,24 @@
 {
-  "name": "discord-webhook-node",
-  "version": "1.1.8",
-  "description": "Allows for easy webhook sending through discord's webhook API",
-  "main": "./src/index.js",
-  "exports": {
-    "import": "./src/index.mjs",
-    "require": "./src/index.js"
-  },
-  "typings": "index.d.ts",
+  "name": "@tycrek/discord-hookr",
+  "version": "0.0.0",
+  "description": "A lightweight and easy way to send webhooks to Discord, without the added baggage of a full API client.",
+  "main": "./dist/main.js",
   "scripts": {
-    "test": "mocha --timeout 50000"
+    "dev": "npm run build && npm start",
+    "build": "tsc"
   },
-  "author": "Matthew Mulfinger",
-  "license": "MIT",
+  "author": "tycrek <t@tycrek.com> (https://tycrek.com/)",
+  "license": "ISC",
+  "repository": "github:tycrek/discord-hookr",
+  "homepage": "https://github.com/tycrek/discord-hookr#readme",
+  "bugs": "https://github.com/tycrek/discord-hookr/issues",
   "keywords": [
-    "Webhook",
-    "Discord",
-    "Bot"
+    "webhook",
+    "discord"
   ],
-  "homepage": "https://github.com/matthew1232/discord-webhook-node#readme",
   "dependencies": {
-    "form-data": "^3.0.0",
-    "node-fetch": "^2.6.0"
-  },
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "mocha": "^8.0.1"
+    "@tsconfig/node16": "^1.0.3",
+    "axios": "^1.2.1",
+    "typescript": "^4.9.4"
   }
 }
