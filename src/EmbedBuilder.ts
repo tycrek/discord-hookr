@@ -1,4 +1,4 @@
-import { Embed, Author, Field, Footer, MediaItem } from './Types';
+import { Embed, Author, Provider, Field, Footer, MediaItem } from './Types';
 
 /**
  * Converts a hex color to an integer
@@ -66,6 +66,11 @@ export class EmbedBuilder {
 
 	public setFooter(footer: Footer) {
 		this.embed.footer = footer;
+		return this;
+	}
+
+	public setProvider(provider: Provider) {
+		this.embed.provider = provider;
 		return this;
 	}
 
