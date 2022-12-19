@@ -5,7 +5,7 @@
   "main": "./dist/main.js",
   "scripts": {
     "dev": "npm run build && npm start",
-    "build": "tsc"
+    "build": "rm -dr dist/ & tsc"
   },
   "author": "tycrek <t@tycrek.com> (https://tycrek.com/)",
   "license": "ISC",
