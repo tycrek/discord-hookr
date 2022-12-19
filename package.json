@@ -19,6 +19,9 @@
     "webhook",
     "discord"
   ],
+  "files": [
+    "/dist"
+  ],
   "dependencies": {
     "@tsconfig/node16": "^1.0.3",
     "@types/node": "^18.11.17",
