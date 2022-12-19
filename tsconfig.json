@@ -3,10 +3,13 @@
     "compilerOptions": {
         "outDir": "./dist",
         "target": "ES2022",
+        "module": "commonjs",
         "lib": [
             "ES2022",
         ],
-        "downlevelIteration": true
+        "downlevelIteration": true,
+        "declaration": true,
+        "declarationDir": "./dist"
     },
     "include": [
         "src/**/*.js",
