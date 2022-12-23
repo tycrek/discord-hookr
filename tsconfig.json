@@ -12,7 +12,6 @@
         "declarationDir": "./dist"
     },
     "include": [
-        "src/**/*.js",
         "src/**/*.ts"
     ]
 }
