@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios';
 import { ClientRequest } from 'http';
 import { sendFile, sendWebhook } from './api';
 import { EmbedBuilder } from './EmbedBuilder';
-import { AllowedMention, Payload } from './ApiTypes';
+import { AllowedMention, Payload, Embed } from './ApiTypes';
 
 type AxiosErrorPotential = { response: AxiosResponse, request: ClientRequest, message: string };
 
@@ -78,9 +78,15 @@ export class Webhook {
 		return this;
 	}
 
-	addEmbed(embed: EmbedBuilder) {
+	addEmbed(embed: EmbedBuilder | Embed | (EmbedBuilder | Embed)[]) {
 		if (!this.payload.embeds) this.payload.embeds = [];
-		this.payload.embeds.push(embed.getEmbed());
+
+		if (Array.isArray(embed))
+			embed.forEach((e: EmbedBuilder | Embed) =>
+				this.payload.embeds!.push((e instanceof EmbedBuilder) ? e.getEmbed() : e));
+		else
+			this.payload.embeds.push((embed instanceof EmbedBuilder) ? embed.getEmbed() : embed);
+
 		return this;
 	}
 
