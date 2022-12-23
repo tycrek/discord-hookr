@@ -1,6 +1,6 @@
 {
   "name": "@tycrek/discord-hookr",
-  "version": "0.1.0-0",
+  "version": "0.1.0",
   "description": "A lightweight and easy way to send webhooks to Discord, without the added baggage of a full API client.",
   "main": "./dist/main.js",
   "type": "commonjs",
