@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { FormData } from 'formdata-polyfill/esm.min';
 import { createReadStream } from 'fs';
-import { Payload } from './Types';
+import { Payload } from './ApiTypes';
 
 /**
  * Checks if the status code is 200 or 204
@@ -29,7 +29,7 @@ export const sendFile = (hookUrl: string, filepath: string, username?: string, a
  * Sends a payload to a webhook (either text, embeds, or both)
  */
 export const sendWebhook = (hookUrl: string, payload: Payload) =>
-	axios.post(hookUrl, JSON.stringify(payload), {
+	axios.post(hookUrl, payload, {
 		headers: { 'Content-Type': 'application/json' },
 		validateStatus
 	});

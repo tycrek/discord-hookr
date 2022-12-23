@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios';
 import { ClientRequest } from 'http';
 import { sendFile, sendWebhook } from './api';
 import { EmbedBuilder } from './EmbedBuilder';
-import { AllowedMention, Payload } from './Types';
+import { AllowedMention, Payload } from './ApiTypes';
 
 type AxiosErrorPotential = { response: AxiosResponse, request: ClientRequest, message: string };
 

@@ -5,8 +5,23 @@
  */
 export type MediaItem = {
 	url: string;
+	/**
+	 * Please note that as of 2022-12-23, Webhooks DO NOT support the proxy_url field.
+	 * @deprecated
+	 * @see https://discord.com/developers/docs/resources/webhook#execute-webhook-jsonform-params
+	 */
 	proxy_url?: string;
+	/**
+	 * Please note that as of 2022-12-23, Webhooks DO NOT support the height field.
+	 * @deprecated
+	 * @see https://discord.com/developers/docs/resources/webhook#execute-webhook-jsonform-params
+	 */
 	height?: number;
+	/**
+	 * Please note that as of 2022-12-23, Webhooks DO NOT support the width field.
+	 * @deprecated
+	 * @see https://discord.com/developers/docs/resources/webhook#execute-webhook-jsonform-params
+	 */
 	width?: number;
 };
 
@@ -29,7 +44,9 @@ export type Footer = {
 };
 
 /**
+ * Please note that as of 2022-12-23, Webhooks DO NOT support the Provider field.
  * @see https://discord.com/developers/docs/resources/channel#embed-object-embed-provider-structure
+ * @deprecated
  */
 export type Provider = {
 	name?: string;

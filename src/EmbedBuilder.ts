@@ -1,4 +1,4 @@
-import { Embed, Author, Provider, Field, Footer, MediaItem } from './Types';
+import { Embed, Author, Provider, Field, Footer, MediaItem } from './ApiTypes';
 
 /**
  * Converts a hex color to an integer
@@ -54,6 +54,11 @@ export class EmbedBuilder {
 		return this;
 	}
 
+	/**
+	 * Please note that as of 2022-12-23, Webhooks DO NOT support the Video field.
+	 * @deprecated
+	 * @see https://discord.com/developers/docs/resources/webhook#execute-webhook-jsonform-params
+	 */
 	public setVideo(video: MediaItem) {
 		this.embed.video = video;
 		return this;
@@ -69,6 +74,11 @@ export class EmbedBuilder {
 		return this;
 	}
 
+	/**
+	 * Please note that as of 2022-12-23, Webhooks DO NOT support the Provider field.
+	 * @deprecated
+	 * @see https://discord.com/developers/docs/resources/webhook#execute-webhook-jsonform-params
+	 */
 	public setProvider(provider: Provider) {
 		this.embed.provider = provider;
 		return this;
