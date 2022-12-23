@@ -7,8 +7,9 @@
   "scripts": {
     "dev": "npm run build && npm start",
     "build": "rm -dr dist/ & tsc",
+    "test": "node test.js",
     "prerelease": "npm run build",
-    "release": "np --no-tests"
+    "release": "np"
   },
   "author": "tycrek <t@tycrek.com> (https://tycrek.com/)",
   "license": "ISC",
