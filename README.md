@@ -107,7 +107,7 @@ Once sent, you'll see all of the embeds in a single message.
 | `setDescription(string)` | Sets the description of the embed. | `builder.setDescription('This is an example embed.');` |
 | `setUrl(string)` | Sets the URL of the embed. | `builder.setUrl('https://example.com');` |
 | `setURL(string)` | Equivalent to `setUrl`. | `builder.setURL('https://example.com');` |
-| `setTimestamp(string? | Date?)` | Sets the timestamp of the embed. | `builder.setTimestamp();` <br> `builder.setTimestamp('2021-01-01');` <br> `builder.setTimestamp(new Date(2021, 6, 9, 4, 20, 0));` |
+| `setTimestamp(string? \| Date?)` | Sets the timestamp of the embed. | `builder.setTimestamp();` <br> `builder.setTimestamp('2021-01-01');` <br> `builder.setTimestamp(new Date(2021, 6, 9, 4, 20, 0));` |
 | `setColor(string)` | Sets the color of the embed using hex. | `builder.setColor('#ff0000');` |
 | `setFooter({})` | Sets the footer of the embed. | `builder.setFooter({ text: 'This is a footer.', icon_url: 'https://example.com/example.png' });` |
 | `setImage({})` | Sets the image of the embed. | `builder.setImage({ url: 'https://example.com/example.png' });` |
@@ -144,7 +144,7 @@ For more information, see these links:
 | `setFlags(number)` | Sets the flags of the webhook. See [Discord documentation](https://discord.com/developers/docs/resources/channel#message-object-message-flags) for more details. | `Unknown` |
 | `setThreadName(string)` | Sets the thread name of the webhook. I believe this is used for the new forums feature. | `Unknown` |
 | `addAttachment({})` | Adds an attachment to the webhook. See [Discord documentation](https://discord.com/developers/docs/resources/channel#attachment-object) for more details. | `Unknown` |
-| `addEmbed(EmbedBuilder | Embed | (EmbedBuilder | Embed)[])` | Adds an embed or multiple embeds to the Webook. | *See [Usage](#Usage) above* |
+| `addEmbed(EmbedBuilder \| Embed \| (EmbedBuilder \| Embed)[])` | Adds an embed or multiple embeds to the Webook. | *See [Usage](#Usage) above* |
 | `send()` | Sends the webhook. | `hook.send().then().catch();` |
 | `sendText()` | Shorthand for `setContent` and `send`. | `hook.sendText('Hello, world!').then().catch();` |
 | `sendFile()` | Unfinished and untested, would not recommend using yet. | `Unknown` |
